@@ -3,10 +3,13 @@ A Reddit type of clone were a user can add a title and link to a URL with featur
 of up and down voting. 
 
 ####
+By: Rouz Majlessi
 www.rouzm.com
-check out my portfolio
 
 
-####### Rouz Majlessi
+##### Setup
+Clone down repo
+Run npm install
+Run ng serve
 
 
