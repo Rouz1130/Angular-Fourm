@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   addArticle (title: HTMLInputElement, link: HTMLInputElement) : boolean {
     console.log(`Adding article title: ${title.value} add link: ${link.value}`);
+    title.value = '';
+    link.value = '';
     return false;
   }
 
