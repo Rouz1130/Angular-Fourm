@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HostBinding } from '@angular/core/src/metadata/directives';
+import { Component, OnInit, HostBinding} from '@angular/core';
+
 
 @Component({
   selector: 'app-article',
