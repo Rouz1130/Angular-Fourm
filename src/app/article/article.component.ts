@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding} from '@angular/core';
+import { Article } from './article.model';
 
 
 
@@ -12,16 +13,15 @@ import { Component, OnInit, HostBinding} from '@angular/core';
 //This exmaple telling Angular to keep the value of the host elements class to be in sync wiht property cssClass
 //by using this @Host.., we set class attribute to have a row. 
 //It encapsulates the selector tag within our markup, meaning we dont have to use it the selector tag in the parent component as well
-export class ArticleComponent implements OnInit {
-  @HostBinding('attr.class') cssClass='row';
-  votes: number;
-  title: string;
-  link: string;
+export class ArticleComponent implements OnInit { 
+@HostBinding('attr.class') cssClass = 'row'; 
+article: Article;
 
-  constructor() { 
-    this.title = 'Angular 5';
-    this.link = 'http://angular.io';
-    this.votes = 10;
+constructor() {
+  this.article = new Article(
+        'Angular 2',
+        'http://angular.io',
+        10);
   }
 
 
@@ -29,14 +29,14 @@ export class ArticleComponent implements OnInit {
   //Add bool value to return false to stop propagates on click event. click events are propagted to parents by default. 
 
   voteUp(): boolean {
-    this.votes += 1;
+    this.article.voteUp();
     return false;
   }
 
 
   // decrement vote by 1
   voteDown(): boolean {
-    this.votes -= 1;
+    this.article.voteDown();
     return false;
   }
   
