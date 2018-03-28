@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding} from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Article } from './article.model';
 
 
@@ -13,15 +13,15 @@ import { Article } from './article.model';
 //This exmaple telling Angular to keep the value of the host elements class to be in sync wiht property cssClass
 //by using this @Host.., we set class attribute to have a row. 
 //It encapsulates the selector tag within our markup, meaning we dont have to use it the selector tag in the parent component as well
-export class ArticleComponent implements OnInit { 
-@HostBinding('attr.class') cssClass = 'row'; 
-article: Article;
+export class ArticleComponent implements OnInit {
+  @HostBinding('attr.class') cssClass = 'row';
+  article: Article;
 
-constructor() {
-  this.article = new Article(
-        'Angular 2',
-        'http://angular.io',
-        10);
+  constructor() {
+    this.article = new Article(
+      'Angular 2',
+      'http://angular.io',
+      10);
   }
 
 
@@ -39,9 +39,9 @@ constructor() {
     this.article.voteDown();
     return false;
   }
-  
 
-  ngOnInit(){
+
+  ngOnInit() {
   }
 
 }
