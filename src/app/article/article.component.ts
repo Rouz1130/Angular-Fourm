@@ -25,18 +25,22 @@ export class ArticleComponent implements OnInit {
 
 
   // increment vote by 1
-  voteUp() {
+  //Add bool value to return false to stop propagates on click event. click events are propagted to parents by default. 
+
+  voteUp(): boolean {
     this.votes += 1;
+    return true;
   }
 
 
   // decrement vote by 1
-  voteDown() {
+  voteDown(): boolean {
     this.votes -= 1;
+    return false;
   }
   
 
-  ngOnInit() {
+  ngOnInit(){
   }
 
 }
