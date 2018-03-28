@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding ,Input} from '@angular/core';
 import { Article } from './article.model';
 
 
@@ -15,13 +15,11 @@ import { Article } from './article.model';
 //It encapsulates the selector tag within our markup, meaning we dont have to use it the selector tag in the parent component as well
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
-  article: Article;
+  @Input() article: Article; 
+
 
   constructor() {
-    this.article = new Article(
-      'Angular 2',
-      'http://angular.io',
-      10);
+   
   }
 
 
