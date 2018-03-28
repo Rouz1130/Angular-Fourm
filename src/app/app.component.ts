@@ -17,4 +17,12 @@ export class AppComponent {
 
     ];
   }
+
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+    console.log(`Addring article title: ${title.value} and link: ${link.value}`);
+    this.articles.push(new Article(title.value, link.value, 0));
+    title.value = '';
+    link.value = '';
+    return false;
+  }
 }
