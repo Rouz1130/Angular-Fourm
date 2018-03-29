@@ -37,13 +37,21 @@ form.form:after {
 
 .ui.grid>.row>.column.votes {
   display: flex;
+
+
 }
 
-ul.ui.list li:before {
+ul.ui.list li:before{
   content: '';
+
 }
 
 .voters {
   clear: both;
   width: 100%;
+}
+
+.ui.large.header:hover {
+background-color: grey;
+
 }
